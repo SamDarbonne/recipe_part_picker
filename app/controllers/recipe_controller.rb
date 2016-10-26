@@ -4,5 +4,6 @@ class RecipeController < ApplicationController
   end
 
   def show
+  	@recipe = (Recipe.all.select {|recipe| recipe.name.parameterize(separator: '-') == params[:recipe_name]}).first
   end
 end
