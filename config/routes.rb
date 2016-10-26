@@ -1,26 +1,25 @@
 Rails.application.routes.draw do
-  get 'ingredient/index'
+  get '/', to: 'welcome#home'
 
-  get 'ingredient/show'
+  get 'ingredients/:ingredient_name', to: 'ingredient#show'
 
   get 'recipes', to: 'recipe#index'
-
   get 'recipe/show'
+  get 'recipes/:recipe_name', to: 'recipe#show'
+
+  get '/browse', to: 'browse#index'
 
   get 'sessions/create'
-
   get 'sessions/destroy'
 
 
-  get 'user/show'
 
+  get 'user/show'
   post '/users', to: 'user#create'
 
-  get '/', to: 'welcome#home'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/signup', to: 'welcome#signup'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
