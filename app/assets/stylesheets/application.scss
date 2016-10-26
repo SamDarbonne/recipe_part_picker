@@ -17,7 +17,9 @@
 $primary-color: #126656 !default;
 $secondary-color: color("yellow", "lighten-2") !default;
 @import "materialize";
-
+.hidden {
+	display: none;
+}
 .ingredient-name {
 	text-align: center;
 }
