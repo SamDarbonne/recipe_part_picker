@@ -13,7 +13,23 @@
  *= require_tree .
  *= require_self
  */
- @import "materialize/components/color";
- $primary-color: #126656 !default;
- $secondary-color: color("yellow", "lighten-2") !default;
- @import "materialize";
+@import "materialize/components/color";
+$primary-color: #126656 !default;
+$secondary-color: color("yellow", "lighten-2") !default;
+@import "materialize";
+
+.ingredient-name {
+	text-align: center;
+}
+.tab {
+	background-color: #aaa;
+	margin-top: -75px;
+}
+.content {
+	background-color: white;
+	margin: 75px 150px;
+}
+.background {
+	background-color: #666;
+	height: 100%;
+}
