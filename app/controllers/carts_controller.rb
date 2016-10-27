@@ -5,6 +5,14 @@ class CartsController < ApplicationController
 
 	def show
 		ingredients = current_user.cart.ingredients
-		@shopping_list = ingredients.uniq
+		cart_list = {}
+		for item in ingredients
+			if cart_list[item.name] == nil
+				cart_list[item.name] = 1
+			else
+				cart_list[item.name] += 1
+			end
+		end
+		@shopping_list = cart_list
 	end
 end

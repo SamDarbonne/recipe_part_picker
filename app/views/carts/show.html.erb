@@ -1,3 +1,4 @@
-<% for ingredient in @shopping_list %>
-<%= ingredient.name %>
+<% @shopping_list.each do |a| %>
+<%= a[0] %>: <%= a[1] %>
+<br>
 <% end %>
