@@ -9,33 +9,22 @@
 Recipe.destroy_all
 Ingredient.destroy_all
 
-ingredient_list = [{
-										name: 'Yam'
-									},
-									{
-										name: 'Carrot'
-									},
-									{
-										name: 'Broth'
-									}]
 
-recipe_list = [{
-								name: 'Yam Stew',
-							},
-							{
-								name: 'Mashed Yams'
-							}]
-for ingredient in ingredient_list
-	Ingredient.create(ingredient)
-	puts "created ingredient: #{ingredient[:name]}"
+yam = Ingredient.create(name: 'Yam')
+veg_broth = Ingredient.create(name: 'Vegetable Broth')
+carrot = Ingredient.create(name: 'Carrot')
+beef_broth = Ingredient.create(name: 'Beef Broth')
+chicken_breast = Ingredient.create(name: 'Chicken Breast')
+p "created ingredients:"
+for ingredient in Ingredient.all
+	p "  " + ingredient.name
 end
 
-for recipe in recipe_list
-	Recipe.create(recipe)
-	puts "created recipe: #{recipe[:name]}"
-end
+yam_soup = Recipe.create(name: 'Yam Soup')
+yam_soup.ingredients << [yam, carrot, veg_broth]
 
-Recipe.first.ingredients << [Ingredient.first, Ingredient.third]
+chicken_soup = Recipe.create(name: 'Chicken Soup')
+chicken_soup.ingredients << [chicken_breast, beef_broth, veg_broth, yam, carrot]
 
-
-Recipe.second.ingredients << [Ingredient.first, Ingredient.second]
+carrot_plate = Recipe.create(name: 'Plate of Carrots')
+carrot_plate.ingredients << [carrot]
