@@ -12,26 +12,57 @@
  *
  *= require_tree .
  *= require_self
+ *= require animate
  */
 @import "materialize/components/color";
-$primary-color: #126656 !default;
-$secondary-color: color("yellow", "lighten-2") !default;
+$primary-color: #004D40 !default;
+$secondary-color: #FF5722 !default;
 @import "materialize";
+.headrow {
+	@extend .tab;
+	margin-top: 75px;
+}
 .hidden {
 	display: none;
 }
-.ingredient-name {
+.centered {
 	text-align: center;
 }
 .tab {
-	background-color: #aaa;
+	background-color: $secondary-color;
 	margin-top: -75px;
 }
 .content {
 	background-color: white;
 	margin: 75px 150px;
+	z-index: 5;
 }
 .background {
 	background-color: #666;
 	height: 100%;
 }
+.active {
+	background-color: #E64A19;
+}
+
+/********* Hover.CSS vendor code *********/
+
+/* Fade */
+.hvr-fade {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  overflow: hidden;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+}
+.hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
+  background-color: #2098D1;
+  color: white;
+}
+
+/* /Fade */
