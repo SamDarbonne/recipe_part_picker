@@ -1,3 +1,6 @@
 <% if current_user %>
-	<h1>Welcome Home,   <%= current_user.username %> </h1>
+	<h1>Welcome Home,   <%= current_user.email %> </h1>
+<% else %>
+	<h1>Welcome to RECIPE PART PICKER DOT COM</h1>
+	<button class="btn">Start Picking</button>
 <% end %>
