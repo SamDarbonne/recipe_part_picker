@@ -11,5 +11,9 @@ function tabClickListener(tabnum) {
 		event.preventDefault();
 		$('.tab-group').addClass('hidden');
 		$('#tab-group-' + tabnum).removeClass('hidden');
+		$('#tab-group-' + tabnum).addClass('fadeIn');
+		$('.tab').removeClass('active');
+		$(this).addClass('active fadeIn');
 	})
-}
+};
+
