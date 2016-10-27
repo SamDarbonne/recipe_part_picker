@@ -1,5 +1,11 @@
 <div class="content">
-	<div class="ingredient-name">
-		<h1><%= @ingredient.name %></h1>
+	<div>
+		<h1 class="centered"><%= @ingredient.name %></h1>
+		<h5>Recipes this ingredient is used in: </h3>
+		<ul>
+			<% for recipe in @ingredient.recipes %>
+				<li><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></li>
+			<% end %>
+		</ul>
 	</div>
 </div>

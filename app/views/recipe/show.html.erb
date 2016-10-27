@@ -1,2 +1,9 @@
-<h1>Recipe#show</h1>
-<p>Find me in app/views/recipe/show.html.erb</p>
+
+	<div class="content">
+		<h1 class="centered headrow"><%= @recipe.name %></h1>
+		<ul class="ingredient-list">
+			<% for ingredient in @recipe.ingredients %>
+				<li><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></li>
+			<% end %>
+		</ul>
+	</div>

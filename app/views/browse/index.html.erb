@@ -1,28 +1,36 @@
 
 <div class="content">
 	<ul class="tabs">
-		<li class="tab" id="tab-1"><a href="">Recipes</a></li>
+		<li class="tab active" id="tab-1"><a href="">Recipes</a></li>
 		<li class="tab" id="tab-2"><a href="">Ingredients</a></li>
 		<li class="tab" id="tab-3"><a href="">Chefs</a></li>
 	</ul>
 	<div id="tab-group-1" class="tab-group">
-		<% for recipe in @recipes %>
-			<h3><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></h3>
-			<ul>
-			<% for ingredient in recipe.ingredients %>
-				<li><%= ingredient.name %></li>
+		<div class="container">
+			<% for recipe in @recipes %>
+				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %>
+				<ul>
+				<% for ingredient in recipe.ingredients %>
+					<li><%= ingredient.name %></li>
+				<% end %>
+				</ul>
 			<% end %>
-			</ul>
-		<% end %>
+		</div>
 	</div>
 	<div id="tab-group-2" class="tab-group hidden">
-		<% for ingredient in @ingredients %>
-			<%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %>
-		<% end %>
+		<div class="container">
+			<ul>
+				<% for ingredient in @ingredients %>
+					<li><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 	<div id="tab-group-3" class="tab-group hidden">
-		<% for chef in @chefs %>
-			<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
-		<% end %>
+		<div class="container">
+			<% for chef in @chefs %>
+				<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
+			<% end %>
+		</div>
 	</div>
 </div>
