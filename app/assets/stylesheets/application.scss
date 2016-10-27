@@ -15,8 +15,8 @@
  *= require animate
  */
 @import "materialize/components/color";
-$primary-color: #004D40 !default;
-$secondary-color: #FF5722 !default;
+$primary-color: #FF5722 !default;
+$secondary-color: #004D40 !default;
 @import "materialize";
 .headrow {
 	@extend .tab;

@@ -4,6 +4,7 @@ class CartsController < ApplicationController
 	end
 
 	def show
-		@shopping_list = current_user.cart.ingredients
+		ingredients = current_user.cart.ingredients
+		@shopping_list = ingredients.uniq
 	end
 end
