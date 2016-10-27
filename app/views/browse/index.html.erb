@@ -7,14 +7,16 @@
 	</ul>
 	<div id="tab-group-1" class="tab-group">
 		<div class="container">
-			<% for recipe in @recipes %>
-				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %>
-				<ul>
-				<% for ingredient in recipe.ingredients %>
-					<li><%= ingredient.name %></li>
+			<div class="row">
+				<% for recipe in @recipes %>
+					<div class="col s4">
+						<div>
+						<img src="<%= recipe.image_url %>" class="recipe-image"/>
+						<span class="image-text"><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></span>
+						</div>
+					</div>
 				<% end %>
-				</ul>
-			<% end %>
+			</div>
 		</div>
 	</div>
 	<div id="tab-group-2" class="tab-group hidden">

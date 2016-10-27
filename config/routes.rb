@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   post 'ingredients/:ingredient_name', to: 'ingredient#add_to_cart'
 
   get 'recipes', to: 'recipe#index'
-  get 'recipe/show'
   get 'recipes/:recipe_name', to: 'recipe#show'
   post 'recipes/:recipe_name', to: 'recipe#add_to_cart'
 
