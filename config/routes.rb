@@ -10,8 +10,6 @@ Rails.application.routes.draw do
 
   get '/browse', to: 'browse#index'
 
-  get 'sessions/create'
-  get 'sessions/destroy'
 
   get 'cart/show', to: 'carts#show'
 

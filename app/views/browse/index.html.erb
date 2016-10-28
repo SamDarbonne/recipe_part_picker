@@ -21,11 +21,14 @@
 	</div>
 	<div id="tab-group-2" class="tab-group hidden">
 		<div class="container">
-			<ul>
+			<div class="row">
 				<% for ingredient in @ingredients %>
-					<li><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></li>
+					<div class="col s4">
+						<img src="<%= ingredient.image_url %>" class="recipe-image" />
+						<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>
+					</div>
 				<% end %>
-			</ul>
+			</div>
 		</div>
 	</div>
 	<div id="tab-group-3" class="tab-group hidden">
