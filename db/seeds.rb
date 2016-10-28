@@ -8,6 +8,10 @@
 
 Recipe.destroy_all
 Ingredient.destroy_all
+User.destroy_all
+
+User.create(email: 'sam@gmail.com', password: 'pass', username: 'samwise≈gamgee', chef: 'true')
+User.create(email: 'sam2@gmail.com', password: 'pass', username: 'Bobby Flay', chef: 'true')
 
 
 yam = Ingredient.create(name: 'Yam, 1 lb', image_url: 'http://www.madame-web.com/wp-content/uploads/2013/12/sweet-potatoes-860_0.jpg')
@@ -50,3 +54,7 @@ for recipe in Recipe.all
 end
 p "created recipes:"
 print out
+p "Users Created:"
+for user in User.all
+	p user.username
+end
