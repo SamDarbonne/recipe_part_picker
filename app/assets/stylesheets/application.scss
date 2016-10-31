@@ -41,6 +41,7 @@ body {
 .headrow {
 	background-color: $secondary-color;
 	color: $primary-color;
+	padding: 0.2rem;
 }
 .hidden {
 	display: none;
@@ -53,7 +54,7 @@ body {
 	margin-top: -75px;
 }
 .content {
-	background-color: #EEE;
+	background-color: #DDD;
 	margin: 30px 70px;
 	z-index: 5;
 	text-align: center;

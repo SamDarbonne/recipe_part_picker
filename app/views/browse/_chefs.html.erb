@@ -1,7 +1,18 @@
 <div id="tab-group-3" class="tab-group hidden">
 		<div class="container">
+
 			<% for chef in @chefs %>
-				<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
+				<div class="row">
+					<div class="col s4">
+						<img src="http://www.theculinaryconnect.com/wp-content/uploads/2016/01/bobby-flay.jpg" class="recipe-image">
+						<br>
+						<%= chef.username %>
+					</div>
+					<div class="col s8">
+						description
+					</div>
+				</div>
 			<% end %>
+			
 		</div>
 	</div>
