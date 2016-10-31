@@ -10,8 +10,45 @@ Recipe.destroy_all
 Ingredient.destroy_all
 User.destroy_all
 
-User.create(email: 'sam@gmail.com', password: 'pass', username: 'samwise≈gamgee', chef: 'true')
-User.create(email: 'sam2@gmail.com', password: 'pass', username: 'Bobby Flay', chef: 'true')
+sam = User.create(email: 'sam@gmail.com', password: 'pass', username: 'samwise≈gamgee', chef: 'true')
+sam2 = User.create(email: 'sam2@gmail.com', password: 'pass', username: 'Bobby Flay', chef: 'true')
+userdata = [{
+		email: 'sam@gmail.com', 
+		password: 'pass', 
+		username: 'samwise≈gamgee', 
+		chef: true
+	},
+	{
+		email: 'sam2@gmail.com', 
+		password: 'pass', 
+		username: 'Bobby Flay', 
+		chef: true
+	},
+	{
+		email: 'sam3@gmail.com',
+		password: 'pass',
+		username: 'Big-Love-32',
+		chef: true
+	},
+	{
+		email: 'test',
+		password: 'pass',
+		username: 'not-a-chef',
+		chef: false
+	},
+	{
+		email: 'oldpeople@old.people',
+		password: 'pass',
+		username: 'oldguy',
+		chef: true
+	}]
+
+
+for user in User.all 
+	cart = Cart.new()
+	cart.user = user
+	user.save
+end
 
 
 yam = Ingredient.create(name: 'Yam, 1 lb', image_url: 'http://www.madame-web.com/wp-content/uploads/2013/12/sweet-potatoes-860_0.jpg')

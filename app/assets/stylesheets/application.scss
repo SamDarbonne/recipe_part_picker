@@ -15,7 +15,7 @@
  *= require animate
  */
 @import "materialize/components/color";
-$primary-color: #FF5722 !default;
+$primary-color: #009096 !default;
 $secondary-color: #004D40 !default;
 @import "materialize";
 
@@ -53,8 +53,12 @@ $secondary-color: #004D40 !default;
 	height: 100%;
 }
 .active {
-	background-color: #E64A19;
+	background-color: #006F60;
+	color: white !important;
 }
+
+
+
 
 /********* Hover.CSS vendor code *********/
 

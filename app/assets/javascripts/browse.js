@@ -10,10 +10,10 @@ function tabClickListener(tabnum) {
 	$('#tab-' + tabnum).on('click', function(event) {
 		event.preventDefault();
 		$('.tab-group').addClass('hidden');
-		$('#tab-group-' + tabnum).removeClass('hidden');
-		$('#tab-group-' + tabnum).addClass('fadeIn');
-		$('.tab').removeClass('active');
-		$(this).addClass('active fadeIn');
+		$('#tab-group-' + tabnum).removeClass('hidden animated fadeIn');
+		$('#tab-group-' + tabnum).addClass('animated fadeIn');
+		$('.tab').removeClass('active animated fadeIn');
+		$(this).addClass('active animated fadeIn');
 	})
 };
 

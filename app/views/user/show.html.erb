@@ -1,2 +1,11 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<% if current_user && current_user == @user%>
+	<%= render 'ownprofile' %>
+<% end %>
+
+<% if @user.chef && @user != current_user %>
+	<%= render 'chef' %>
+<% end %>
+
+<% if ((@user.chef == true) == false) && ((current_user == @user) == false) %>
+	<%= render 'otherprofile' %>
+<% end %>

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get '/browse', to: 'browse#index'
 
+  get '/chefs/:username', to: 'user#show'
+  get '/users/:username', to: 'user#show'
 
   get 'cart/show', to: 'carts#show'
 

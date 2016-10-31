@@ -1,8 +1,6 @@
 class UserController < ApplicationController
   def show
-  end
-
-  def new
+    @user = (User.all.select {|user| user.username.parameterize(separator: '-') == params[:username]}).first
   end
 
   def create
