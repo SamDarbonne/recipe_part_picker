@@ -10,19 +10,19 @@ Recipe.destroy_all
 Ingredient.destroy_all
 User.destroy_all
 
-sam = User.create(email: 'sam@gmail.com', password: 'pass', username: 'samwise≈gamgee', chef: 'true')
-sam2 = User.create(email: 'sam2@gmail.com', password: 'pass', username: 'Bobby Flay', chef: 'true')
-userdata = [{
+user_data = [{
 		email: 'sam@gmail.com', 
 		password: 'pass', 
 		username: 'samwise≈gamgee', 
-		chef: true
+		chef: true,
+		description: 'Samwise Gamgee is a truly world class chef, with roots in The Shire. Sam took up cooking in order to feed his fearless leader and employer, Mr. Frodo.'
 	},
 	{
 		email: 'sam2@gmail.com', 
 		password: 'pass', 
 		username: 'Bobby Flay', 
-		chef: true
+		chef: true,
+		description: 'Born in New York City in 1964, Bobby Flay opened his first restaurant, Mesa Grill, in 1991, winning immediate acclaim. He made his first appearance on the Food Network in 1994 and soon became a television fixture in the vein of fellow celebrity chefs Mario Batali, Emeril Lagasse and Rachael Ray. Flay has hosted several Food Network shows, including Grill It! with Bobby Flay and Throwdown with Bobby Flay.'
 	},
 	{
 		email: 'sam3@gmail.com',
@@ -42,7 +42,12 @@ userdata = [{
 		username: 'oldguy',
 		chef: true
 	}]
-
+for user in user_data
+	new_user = User.create(user)
+	cart = Cart.new()
+	new_user.cart = cart
+	new_user.save
+end
 
 for user in User.all 
 	cart = Cart.new()
