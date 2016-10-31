@@ -1,0 +1,15 @@
+<div id="tab-group-1" class="tab-group">
+		<div class="container">
+			<div class="row">
+				<% for recipe in @recipes %>
+					<div class="col s4">
+						<div>
+						<img src="<%= recipe.image_url %>" class="recipe-image"/>
+						<br>
+						<span class="image-text"><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></span>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>

@@ -19,19 +19,28 @@ $primary-color: #009096 !default;
 $secondary-color: #004D40 !default;
 @import "materialize";
 
+
+body {
+	background-color: #666;
+}
 .recipe-image {
 	height: 200px;
 	width: 200px;
 	background-size: cover;
 	overflow: none;
 	position: relative;
+	border: 5px solid #440000;
+	border-radius: 105px;
 }
 .image-text {
 	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	color: #440000 !important;
 }
 .headrow {
-	@extend .tab;
-	margin-top: 75px;
+	background-color: $secondary-color;
+	color: $primary-color;
 }
 .hidden {
 	display: none;
@@ -44,13 +53,15 @@ $secondary-color: #004D40 !default;
 	margin-top: -75px;
 }
 .content {
-	background-color: white;
-	margin: 75px 150px;
+	background-color: #EEE;
+	margin: 30px 70px;
 	z-index: 5;
+	text-align: center;
 }
 .background {
-	background-color: #666;
+/*	background-color: #666;*/
 	height: 100%;
+	text-align: center;
 }
 .active {
 	background-color: #006F60;

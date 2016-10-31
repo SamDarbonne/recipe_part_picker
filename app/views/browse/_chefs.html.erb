@@ -1,0 +1,7 @@
+<div id="tab-group-3" class="tab-group hidden">
+		<div class="container">
+			<% for chef in @chefs %>
+				<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
+			<% end %>
+		</div>
+	</div>

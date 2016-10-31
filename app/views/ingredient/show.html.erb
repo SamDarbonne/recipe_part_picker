@@ -1,6 +1,6 @@
 <div class="content">
-	<div>
-		<h1 class="centered"><%= @ingredient.name %><%= current_user %></h1>
+	<div class="container">
+		<h1><%= @ingredient.name %></h1>
 		<h5>Recipes this ingredient is used in: </h3>
 		<ul>
 			<% for recipe in @ingredient.recipes %>

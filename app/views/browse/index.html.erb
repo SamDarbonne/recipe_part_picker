@@ -5,37 +5,9 @@
 		<li class="tab" id="tab-2"><a href="">Ingredients</a></li>
 		<li class="tab" id="tab-3"><a href="">Chefs</a></li>
 	</ul>
-	<div id="tab-group-1" class="tab-group">
-		<div class="container">
-			<div class="row">
-				<% for recipe in @recipes %>
-					<div class="col s4">
-						<div>
-						<img src="<%= recipe.image_url %>" class="recipe-image"/>
-						<span class="image-text"><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></span>
-						</div>
-					</div>
-				<% end %>
-			</div>
-		</div>
-	</div>
-	<div id="tab-group-2" class="tab-group hidden">
-		<div class="container">
-			<div class="row">
-				<% for ingredient in @ingredients %>
-					<div class="col s4">
-						<img src="<%= ingredient.image_url %>" class="recipe-image" />
-						<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>
-					</div>
-				<% end %>
-			</div>
-		</div>
-	</div>
-	<div id="tab-group-3" class="tab-group hidden">
-		<div class="container">
-			<% for chef in @chefs %>
-				<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
-			<% end %>
-		</div>
-	</div>
+	<%= render 'recipes' %>
+
+	<%= render 'ingredients' %>
+
+	<%= render 'chefs' %>
 </div>
