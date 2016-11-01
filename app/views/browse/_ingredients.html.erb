@@ -1,9 +1,9 @@
 	<div id="tab-group-2" class="tab-group hidden">	
 	<div class="container">
 			<div class="padded">
-			<div class="row">
+			<div class="row padrow">
 				<% for ingredient in @ingredients %>
-					<div class="col s4">
+					<div class="col l4">
 						<img src="<%= ingredient.image_url %>" class="recipe-image" />
 						<br>
 						<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>

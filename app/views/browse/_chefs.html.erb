@@ -6,7 +6,7 @@
 					<div class="col s4">
 						<img src=<%= chef.profile_image %> class="recipe-image">
 						<br>
-						<%= chef.username %>
+						<%= link_to chef.username, '/chefs/' + chef.username.parameterize(separator: '-') %>
 					</div>
 					<div class="col s8">
 						<div class="chef-description">

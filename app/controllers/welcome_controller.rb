@@ -8,6 +8,6 @@ class WelcomeController < ApplicationController
   end
 
   def signup
-
+  	@user = User.new()
   end
 end

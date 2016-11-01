@@ -1,1 +1,29 @@
-<h1> chef profile: <%= @user.username %> </h1>
+<div class="container">
+	<div class="content">
+		<div class="row">
+			<div class="col l4">
+				<img src="<%= @user.profile_image %>" class="recipe-image">
+				<br>
+				<%= @user.username %>
+			</div>
+			<div class="col l8">
+				<div class="padded justified">
+					<%= @user.description %>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		<div class="headrow"><h6>Recipes by this chef:</h6></div>
+				<div class="row">
+		<% for recipe in @user.recipes %>
+			<div class="col l4">
+					<img src="<%= recipe.image_url %>" class="recipe-image-small">
+					<br>
+					<span class="image-text"><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></span>
+				</div>
+
+		<% end %>
+			</div>
+		</div>
+	</div>
+</div>

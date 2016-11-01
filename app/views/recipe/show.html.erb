@@ -1,6 +1,7 @@
 
 	<div class="content">
-		<h1 class="centered headrow"><%= @recipe.name %></h1>
+		<h2 class="centered headrow"><%= @recipe.name %></h2>
+		<h5> Ingredients Used in this Recipe: </h5>
 		<ul class="ingredient-list">
 			<% for ingredient in @recipe.ingredients %>
 				<li><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></li>
