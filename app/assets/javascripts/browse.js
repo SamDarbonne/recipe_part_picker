@@ -9,13 +9,14 @@ $(document).on('turbolinks:load', function() {
 function tabClickListener(tabnum) {
 	$('#tab-' + tabnum).on('click', function(event) {
 		event.preventDefault();
+		//hide all tab groups
 		$('.tab-group').addClass('hidden');
+		//show specific tab group 
 		$('#tab-group-' + tabnum).removeClass('hidden');
-		$('#tab-group-' + tabnum).children().removeClass('animated fadeIn2')
+		//do some animating and janimating (longer animation time)
+		$('#tab-group-' + tabnum).children().removeClass('janimated fadeOut animated fadeIn2')
 		$('#tab-group-' + tabnum).children().addClass('animated fadeIn2');
-		$('.active').removeClass('active animated fadeIn').addClass('animated fadeOut')
-
-		// $('.tab').removeClass('active animated fadeIn');
+		$('.active').removeClass('active animated fadeIn').addClass('janimated fadeOut')
 		$(this).addClass('active animated fadeIn');
 	})
 };

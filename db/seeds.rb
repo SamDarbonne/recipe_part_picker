@@ -15,32 +15,38 @@ user_data = [{
 		password: 'pass', 
 		username: 'samwise≈gamgee', 
 		chef: true,
-		description: 'Samwise Gamgee is a truly world class chef, with roots in The Shire. Sam took up cooking in order to feed his fearless leader and employer, Mr. Frodo.'
+		description: 'Samwise Gamgee is a truly world class chef, with roots in The Shire. Sam took up cooking in order to feed his fearless leader and employer, Mr. Frodo.',
+		profile_image: 'https://pbs.twimg.com/profile_images/2261379935/image.jpg'
 	},
 	{
 		email: 'sam2@gmail.com', 
 		password: 'pass', 
 		username: 'Bobby Flay', 
 		chef: true,
-		description: 'Born in New York City in 1964, Bobby Flay opened his first restaurant, Mesa Grill, in 1991, winning immediate acclaim. He made his first appearance on the Food Network in 1994 and soon became a television fixture in the vein of fellow celebrity chefs Mario Batali, Emeril Lagasse and Rachael Ray. Flay has hosted several Food Network shows, including Grill It! with Bobby Flay and Throwdown with Bobby Flay.'
+		description: 'Born in New York City in 1964, Bobby Flay opened his first restaurant, Mesa Grill, in 1991, winning immediate acclaim. He made his first appearance on the Food Network in 1994 and soon became a television fixture in the vein of fellow celebrity chefs Mario Batali, Emeril Lagasse and Rachael Ray. Flay has hosted several Food Network shows, including Grill It! with Bobby Flay and Throwdown with Bobby Flay.',
+		profile_image: 'http://www.theculinaryconnect.com/wp-content/uploads/2016/01/bobby-flay.jpg'
 	},
 	{
 		email: 'sam3@gmail.com',
 		password: 'pass',
 		username: 'Big-Love-32',
-		chef: true
+		chef: true,
+		description: 'This guy has a lot of love to spread around, and it shows in his cooking.',
+		profile_image: 'http://purple-drank.com/wp-content/uploads/2016/05/Big-Love-Houstons-Best-Officially.jpg'
 	},
 	{
 		email: 'test',
 		password: 'pass',
 		username: 'not-a-chef',
-		chef: false
+		chef: false,
 	},
 	{
 		email: 'oldpeople@old.people',
 		password: 'pass',
 		username: 'oldguy',
-		chef: true
+		chef: true,
+		description: 'Probably too old to be a chef but definitely too grumpy for us to let him know.',
+		profile_image: 'http://www.littlegeeklost.com/wp-content/uploads/2014/10/Grumpy-old-man-Thumbnail-e1360740181671.jpg'
 	}]
 for user in user_data
 	new_user = User.create(user)

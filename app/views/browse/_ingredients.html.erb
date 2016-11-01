@@ -1,5 +1,6 @@
 	<div id="tab-group-2" class="tab-group hidden">	
 	<div class="container">
+			<div class="padded">
 			<div class="row">
 				<% for ingredient in @ingredients %>
 					<div class="col s4">
@@ -8,6 +9,7 @@
 						<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>
 					</div>
 				<% end %>
+			</div>
 			</div>
 		</div>
 		</div>

@@ -8,9 +8,27 @@
  * Copyright (c) 2016 Daniel Eden
  */
 
+
+
+ /*!
+  * Most of animate.css is no longer in here. This document
+  * has been customized and truncated to fit the website
+  * but has been left in the vendors section
+  * because I don't understand copyright law or 
+  * anything like that. Please don't sue?
+  *
+  */
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.janimated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }

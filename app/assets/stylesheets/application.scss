@@ -19,6 +19,9 @@ $primary-color: #009096 !default;
 $secondary-color: #004D40 !default;
 @import "materialize";
 
+.padded {
+	padding: 20px;
+}
 
 body {
 	background-color: #666;

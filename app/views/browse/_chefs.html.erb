@@ -1,18 +1,20 @@
 <div id="tab-group-3" class="tab-group hidden">
 	<div class="container">
-		<% for chef in @chefs %>
-			<div class="row">
-				<div class="col s4">
-					<img src=<%= chef.profile_image %> class="recipe-image">
-					<br>
-					<%= chef.username %>
-				</div>
-				<div class="col s8">
-					<div class="chef-description">
-						<p><%= chef.description %></p>
+		<div class="padded">
+			<% for chef in @chefs %>
+				<div class="row">
+					<div class="col s4">
+						<img src=<%= chef.profile_image %> class="recipe-image">
+						<br>
+						<%= chef.username %>
+					</div>
+					<div class="col s8">
+						<div class="chef-description">
+							<p><%= chef.description %></p>
+						</div>
 					</div>
 				</div>
-			</div>
-		<% end %>
+			<% end %>
+		</div>
 	</div>
 </div>
