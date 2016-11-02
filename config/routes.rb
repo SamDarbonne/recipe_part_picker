@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'user/show'
   post '/users', to: 'user#create'
-
+  post 'cart/remove/:ingredient_id', to: 'carts#remove'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
