@@ -56,13 +56,13 @@ for user in User.all
 end
 
 
-yam = Ingredient.create(name: 'Yam, 1 lb', image_url: 'http://www.madame-web.com/wp-content/uploads/2013/12/sweet-potatoes-860_0.jpg')
-veg_broth = Ingredient.create(name: 'Vegetable Broth, 1 Qt.', image_url: 'https://images-na.ssl-images-amazon.com/images/I/511IMCLXvXL.jpg')
-carrot = Ingredient.create(name: 'Carrots, 1 lb', image_url: 'http://www.seedsavers.org/site/img/SEO%20Images/0357-danvers-carrot-organic.jpg')
-beef_broth = Ingredient.create(name: 'Beef Broth, 1 Qt.', image_url: 'https://images.jet.com/md5/c914d78eb601a73e7b925f6f8b405838.500')
-chicken_breast = Ingredient.create(name: 'Chicken Breast, 1 lb', image_url: 'https://ll-us-i5.wal.co/asr/af8a9806-329d-4a60-92ca-bbbf3026de27_1.1033e84849806738126805046ed9d1b5.jpeg-6364e4d7caaca0d209bfcfe7c6b5ce1d8a73e551-optim-500x500.jpg')
+yam = Ingredient.create(name: 'Yam, 1 lb', price: 140, image_url: 'http://www.madame-web.com/wp-content/uploads/2013/12/sweet-potatoes-860_0.jpg')
+veg_broth = Ingredient.create(name: 'Vegetable Broth, 1 Qt.', price: 350,image_url: 'https://images-na.ssl-images-amazon.com/images/I/511IMCLXvXL.jpg')
+carrot = Ingredient.create(name: 'Carrots, 1 lb', price: 99, image_url: 'http://www.seedsavers.org/site/img/SEO%20Images/0357-danvers-carrot-organic.jpg')
+beef_broth = Ingredient.create(name: 'Beef Broth, 1 Qt.', price: 450, image_url: 'https://images.jet.com/md5/c914d78eb601a73e7b925f6f8b405838.500')
+chicken_breast = Ingredient.create(name: 'Chicken Breast, 1 lb', price: 499, image_url: 'https://ll-us-i5.wal.co/asr/af8a9806-329d-4a60-92ca-bbbf3026de27_1.1033e84849806738126805046ed9d1b5.jpeg-6364e4d7caaca0d209bfcfe7c6b5ce1d8a73e551-optim-500x500.jpg')
 
-r1 = Recipe.new(name: 'Yam Soup', image_url: 'http://simplecookingstudio.com/Sweet%20Yam%20Soup.jpg')
+r1 = Recipe.new(name: 'Yam Soup', instructions: 'chop yams into mouth sized pieces. Place yams in a pot to boil. Cover yams in broth and let boil', image_url: 'http://simplecookingstudio.com/Sweet%20Yam%20Soup.jpg')
 r1.ingredients << [yam, carrot, veg_broth]
 
 r2 = Recipe.new(name: 'Chicken Soup', image_url: 'http://img1.cookinglight.timeinc.net/sites/default/files/styles/500xvariable/public/image/2012/01/1201p116-good-old-fashioned-chicken-soup-x.jpg?itok=pFMU7EvJ')
