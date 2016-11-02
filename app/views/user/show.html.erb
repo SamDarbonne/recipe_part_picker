@@ -7,5 +7,5 @@
 <% end %>
 
 <% if ((@user.chef == true) == false) && ((current_user == @user) == false) %>
-	<%= render 'otherprofile' %>
+	<%= redirect_to '/' %>
 <% end %>

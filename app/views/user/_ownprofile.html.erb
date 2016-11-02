@@ -1,1 +1,10 @@
-<h1> Welcome to your profile page </h1>
+
+
+	<div class="content">		
+		<h3 class="headrow"> Welcome to your profile page, <%= current_user.username %> </h3>
+		<div class="row">
+			<% for recipe in @user.recipes %>
+				<%= recipe.name %>
+			<% end %>
+		</div>
+	</div>
