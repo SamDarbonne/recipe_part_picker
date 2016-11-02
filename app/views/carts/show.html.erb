@@ -1,4 +1,49 @@
-<% @shopping_list.each do |a| %>
-<%= a[0] %>: <%= a[1] %>
-<br>
-<% end %>
+
+<div class="content" id="shopping-list">
+	<div class="container">
+		
+		<% if @shopping_list.length == 0 %>
+			Your cart is currently empty. Add some stuff to it. 
+		<% else %>
+		<% total = 0 %>
+		<% @shopping_list.each do |a| %>
+		<% total += (a[0].price * a[1]) %>
+			<div class="ingredient-card">
+				<div class="row">
+					<div class="col m4">
+						<%= link_to a[0].name, '/ingredients/' + a[0].name.to_s.parameterize(separator: '-') %>
+					</div>
+					<div class="col m2">
+						<%= a[1] %>
+					</div>
+					<div class="col m2">
+						<% if a[0].price.to_s.length > 2 %>
+							<%= "$#{a[0].price.to_s[(0..(-3))]}.#{a[0].price.to_s[(-2..-1)]}" %>
+						<% else %>
+							<%= "$0.#{a[0].price.to_s[(-2..-1)]}" %>
+						<% end %>
+					</div>
+					<div class="col m2">
+						<% if (a[0].price * a[1]).to_s.length > 2 %>
+							<%= "$#{(a[0].price * a[1]).to_s[(0..(-3))]}.#{(a[0].price * a[1]).to_s[(-2..-1)]}" %>
+						<% else %>
+							<%= "$0.#{(a[0].price * a[1]).to_s[(-2..-1)]}" %>
+						<% end %>
+					</div>
+					<div class="col m2">
+						<%= button_to 'Remove', '/cart/remove/' + a[0].id.to_s, class: 'btn', id: 'btn-small' %>
+					</div>
+				</div>
+			</div>
+
+
+		<% end %>
+		<% if total > 99 %>
+		total: <%= "#{total.to_s[0..-3]}.#{total.to_s[-2..-1]}" %>
+		<% else %> 
+		total: <%= "0.#{total.to_s[-2..1]}" %>
+		<% end %>
+		<% end %>
+
+	</div>
+</div>

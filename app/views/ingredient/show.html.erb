@@ -3,11 +3,12 @@
 
 		<h2 class="headrow"><%= @ingredient.name %></h2>
 		<h5>Recipes this ingredient is used in: </h5>
-		<ul>
+		<div class="container">
 			<% for recipe in @ingredient.recipes %>
-				<li><%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-') %></li>
+				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-'), class: 'bubble' %>
 			<% end %>
-			<%= button_to 'Add to Cart', '', data: @ingredient %>
-		</ul>
+			<%= button_to 'Add to Cart', '', data: @ingredient, class: "btn" %>
+		</div>
+			
 
 </div>
