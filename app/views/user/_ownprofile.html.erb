@@ -4,7 +4,7 @@
 		<h3 class="headrow"> Welcome to your profile page, <%= current_user.username %> </h3>
 		<div class="row">
 			<% for recipe in @user.recipes %>
-				<%= recipe.name %>
+				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-'), class: "bubble" %>
 			<% end %>
 		</div>
 	</div>

@@ -1,7 +1,11 @@
 
 	<div class="content">
 		<h2 class="centered headrow"><%= @recipe.name %></h2>
-		<p><%= @recipe.instructions %>
+		<h3>Chef: <%= link_to @recipe.user.username, '/chefs/' + @recipe.user.username.parameterize(separator: '-') %></h3>
+				<% if current_user == @recipe.user %>
+					<%= link_to 'Edit Recipe', '/recipes/' + @recipe.name.parameterize(separator: '-') + '/edit/', class: 'btn' %>
+				<% end %>
+		<p>Instructions: <%= @recipe.instructions %></p>
 		<h5> Ingredients Used in this Recipe: </h5>
 			<div class="container">
 				<% for ingredient in @recipe.ingredients %>

@@ -1,6 +1,7 @@
 console.log('browse.js loaded')
 
 $(document).on('turbolinks:load', function() {
+
 	tabClickListener('1');
 	tabClickListener('2');
 	tabClickListener('3');
