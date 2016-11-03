@@ -1,7 +1,23 @@
-# README
+# Recipe Part Picker
+
+
+
+
+
+
+
+## ERD
 
 <img src="./readme-images/ERD.jpg">
 
+#### There was also another planned relationship for users to have a recipe list of their own curation so that they could have a custom list of recipes to add to their cart, but it was scrapped due to time constraints. 
+
+<img src="./readme-images/planned-ERD.jpg">
+
+## Wireframes
+
+<img src="./readme-images/browse-wireframe">
+<img src="./readme-images/chef-browse">
 
 
 
