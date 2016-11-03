@@ -1,6 +1,42 @@
 # README
 
 <img src="./readme-images/ERD.jpg">
+
+
+
+
+
+
+
+
+
+
+
+
+# Contributing
+<ol>
+	<li>
+		Fork this repo
+	</li>
+	<li>
+		create a new feature branch
+	</li>
+	<li>
+		commit changes to new feature branch
+	</li>
+	<li>
+		submit pull request
+	</li>
+</ol>
+### Deploying
+<ul>
+	<li> bundle install</li>
+	<li> rake db:setup</li>
+</ul>
+
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
