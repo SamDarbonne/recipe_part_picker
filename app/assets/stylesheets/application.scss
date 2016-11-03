@@ -19,6 +19,14 @@ $primary-color: #009096 !default;
 $secondary-color: #004D40 !default;
 @import "materialize";
 
+.row {
+	margin-top: 10px;
+}
+.recipe {
+	margin-bottom: 1rem;
+	overflow-x: hidden;
+}
+
 #shopping-list {
 	padding: 20px 0;
 }
@@ -61,6 +69,7 @@ $secondary-color: #004D40 !default;
 .row a {
 	color: $primary-color;
 	text-decoration: underline;
+	font-size: 8;
 }
 body {
 	background-color: #666;

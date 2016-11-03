@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   get 'ingredients/:ingredient_name', to: 'ingredient#show'
   post 'ingredients/:ingredient_name', to: 'ingredient#add_to_cart'
 
-  get 'recipes', to: 'recipe#index'
+
+  get 'recipes/new', to: 'recipe#new'
+  post 'recipes/create', to: 'recipe#create'
   get 'recipes/:recipe_name', to: 'recipe#show'
   post 'recipes/:recipe_name', to: 'recipe#add_to_cart'
   get 'recipes/:recipe_name/edit', to: 'recipe#edit'
   get '/browse', to: 'browse#index'
-
+  get 'recipes/:recipe_name/:ingredient_id/add', to: 'recipe#add_ingredient'
   get '/chefs/:username', to: 'user#show'
   get '/users/:username', to: 'user#show'
   get 'cart/show', to: 'carts#show'

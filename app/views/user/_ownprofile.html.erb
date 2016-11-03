@@ -2,6 +2,7 @@
 
 	<div class="content">		
 		<h3 class="headrow"> Welcome to your profile page, <%= current_user.username %> </h3>
+		<%= link_to 'Add a new recipe', '/recipes/new', class: 'btn' %>
 		<div class="row">
 			<% for recipe in @user.recipes %>
 				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-'), class: "bubble" %>

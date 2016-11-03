@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="content">
 
-		<%= form_for @recipe, url: '/recipes/' + @recipe.name.parameterize(separator: '-') do |f| %>
+		<%= form_for @recipe, url: '/recipes/create' do |f| %>
 			<fieldset>
 		        <div class="control-group">
 		          <label class="label" for="name">Recipe name</label>
@@ -15,7 +15,6 @@
 		        </div>
 
 		        <div class="control-group">
-		          <label class="label" for="instructions">Recipe Instructions</label>
 		          <%= f.text_area :instructions %>
 		        </div>
 

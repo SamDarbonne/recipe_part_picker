@@ -4,8 +4,12 @@
 		<h3>Chef: <%= link_to @recipe.user.username, '/chefs/' + @recipe.user.username.parameterize(separator: '-') %></h3>
 				<% if current_user == @recipe.user %>
 					<%= link_to 'Edit Recipe', '/recipes/' + @recipe.name.parameterize(separator: '-') + '/edit/', class: 'btn' %>
+					<h4> Add Ingredients to Recipe </h4>
+					<% for ingredient in Ingredient.all.select{|a| @recipe.ingredients.include?(a) == false} %>
+						<%= link_to ingredient.name, '/recipes/' + @recipe.name.parameterize(separator: '-') + '/' + ingredient.id.to_s + '/add', class: 'bubble' %>
+					<% end %>
 				<% end %>
-		<p>Instructions: <%= @recipe.instructions %></p>
+		<div class="container"><p>Instructions: <%= @recipe.instructions %></p></div>
 		<h5> Ingredients Used in this Recipe: </h5>
 			<div class="container">
 				<% for ingredient in @recipe.ingredients %>
@@ -14,6 +18,7 @@
 				<% if current_user %>
 					<%= button_to 'Add Ingredients to Cart', '', class: 'btn' %>
 				<% else %>
+					<br>
 					<%= link_to 'Sign in to shop!', '/signup', class: 'btn' %>
 				<% end %>
 			</div>

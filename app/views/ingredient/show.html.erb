@@ -7,7 +7,12 @@
 			<% for recipe in @ingredient.recipes %>
 				<%= link_to recipe.name, '/recipes/' + recipe.name.parameterize(separator: '-'), class: 'bubble' %>
 			<% end %>
-			<%= button_to 'Add to Cart', '', data: @ingredient, class: "btn" %>
+			<% if current_user %>
+				<%= button_to 'Add to Cart', '', data: @ingredient, class: "btn" %>
+			<% else %>
+				<br>
+				<%= link_to 'Sign in to shop!', '/signup', class: 'btn' %>
+			<% end %>
 		</div>
 			
 
