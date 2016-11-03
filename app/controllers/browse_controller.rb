@@ -17,7 +17,19 @@ class BrowseController < ApplicationController
   	@recipes << current_arr
 
 
-  	@ingredients = Ingredient.all
+  	@ingredients = []
+  	cur = []
+  	count = 0
+  	for el in Ingredient.all
+  		cur << el
+  		count += 1
+  		if count == 3
+  			@ingredients << cur
+  			cur = []
+  			count = 0
+  		end
+  	end
+  	@ingredients << cur
 
 
   	@chefs = User.all.select do |user|

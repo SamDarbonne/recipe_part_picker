@@ -1,15 +1,19 @@
-	<div id="tab-group-2" class="tab-group hidden">	
+<div id="tab-group-2" class="tab-group hidden">	
 	<div class="container">
-			<div class="padded">
-			<div class="row padrow">
-				<% for ingredient in @ingredients %>
-					<div class="col l4">
-						<img src="<%= ingredient.image_url %>" class="recipe-image" />
-						<br>
-						<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>
-					</div>
-				<% end %>
-			</div>
-			</div>
+		<div>
+			<% for row in @ingredients %>
+				<div class="row">
+					<% for ingredient in row %>
+						<div class="col l4 animated fadeIn2 ingredient">
+							<div>
+								<img src="<%= ingredient.image_url %>" class="recipe-image"/>
+								<br>
+								<span class="image-text"><%= link_to ingredient.name, '/ingredients/' + ingredient.name.parameterize(separator: '-') %></span>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
 		</div>
-		</div>
+	</div>
+</div>
