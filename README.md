@@ -26,9 +26,21 @@ Recipe Part Picker was built in Ruby on Rails v5.0 and uses the following techno
 <img src="./readme-images/browse-wireframe.jpg">
 <img src="./readme-images/chef-browse.jpg">
 
+## Technical Challenges
 
+#### Embracing Logic in the view
 
+Materialize is not a big fan of having too many columns in one row, so to work around this I had to pass the list of recipes and ingredients as an array of arrays of length three to the view, and then set up a loop within a loop in the view logic using ERB tags (Clownhats and Sprinkles). 
 
+<br>
+Here we see the controller logic that constructs the array of arrays of recipes
+<img src="./readme-images/browse-controller.png">
+<br> and here we see the double looping logic in the view
+<img src="./readme-images/recipe-show.png">
+
+I believe I may have gone too far in embracing logic in the view with my shopping cart show page. Here you can see all the logic for formatting prices and calculating total cart price.
+
+<img src="./readme-images/ERB-magic.png">
 
 
 
