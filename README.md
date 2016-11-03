@@ -1,8 +1,15 @@
 # Recipe Part Picker
 
+Recipe Part Picker was inspired by www.pcpartpicker.com and simplifies the process of creating a grocery shopping list. Users can browse through a list of recipes created by professional chefs and add their ingredients to an easy to manage shopping list. Future plans include integration with online grocery delivery services to completely streamline the process of choosing meals, creating a shopping list from those meals, and ordering the ingredients on your shopping list. 
 
-
-
+## Tech Stack
+Recipe Part Picker was built in Ruby on Rails v5.0 and uses the following technologies:
+<ul>
+	<li>jQuery</li>
+	<li>Sass</li>
+	<li>Materialize</li>
+	<li>BCrypt</li>
+</ul>
 
 
 
@@ -51,27 +58,3 @@
 </ul>
 
 
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

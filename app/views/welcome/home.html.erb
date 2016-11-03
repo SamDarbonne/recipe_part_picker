@@ -3,11 +3,14 @@
 <% if current_user %>
 	<h3>Welcome Home,   <%= current_user.username %> </h3>
 <% else %>
-	<h1>Welcome to RECIPE PART PICKER DOT COM</h1>
+	<h2>Welcome to Recipe Part Picker, where shopping lists are simple and dreams become reality.</h2>
 <% end %>
 	<%= link_to 'Get Picking!', '/browse', class: "btn" %>
 	<% if current_user && current_user.chef %>
 		<%= link_to 'your recipes', '/chefs/' + current_user.username.parameterize(separator: '-'), class: 'btn' %>
+	<% end %>
+	<% if current_user == nil %>
+		<%= link_to 'Sign Up', '/signup', class: 'btn waves' %>
 	<% end %>
 </div>
 </div>
