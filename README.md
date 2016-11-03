@@ -16,8 +16,8 @@
 
 ## Wireframes
 
-<img src="./readme-images/browse-wireframe">
-<img src="./readme-images/chef-browse">
+<img src="./readme-images/browse-wireframe.jpg">
+<img src="./readme-images/chef-browse.jpg">
 
 
 
